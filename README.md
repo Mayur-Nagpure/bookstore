@@ -110,19 +110,14 @@ docker run -it mayur-nagpure/bookstore
 Run tests with:
 mvn test
 
-text
-
 ---
 
-Project Roadmap
+## Project Roadmap
 
- Implement core search and filter functionality
-
- Add Docker Compose support for local development
-
- Expand AI chatbot integration and improve responses
-
- Complete checkout and payment processing features
+ [] Implement core search and filter functionality
+ [] Add Docker Compose support for local development
+ [] Expand AI chatbot integration and improve responses
+ [] Complete checkout and payment processing features
 
 ---
 
