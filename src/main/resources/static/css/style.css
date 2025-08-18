@@ -1,0 +1,43 @@
+body {
+    background: url("/images/pexels-itfeelslikefilm-590493.jpg")
+    no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(40,22,12,0.55); /* warm semi-transparent overlay */
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+#main-content {
+    background: rgba(25, 15, 10, 0.8); /* optional: semi-transparent card effect for your main content */
+    border-radius: 14px;
+    margin-top: 40px;
+    padding: 25px 18px;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.table th, td {
+	text-align: center;
+}
+
+.field-error {
+	border-color: #FF0000;
+	margin-bottom: 10px;
+}
+
+.fa-bigger {
+	font-size: 1.5em;
+}
+
+.form-control {
+	color:black;
+}

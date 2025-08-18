@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Online Book Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body {
+      background: url('/images/books.jpg') center center / cover no-repeat fixed;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-glass {
+      background: rgba(255, 255, 255, 0.10); /* Slightly visible glass */
+      border-radius: 22px;
+      padding: 42px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 6px 32px rgba(0,0,0,.18);
+      backdrop-filter: blur(8px);       /* <- THIS IS THE MODERN GLASS BLUR */
+      -webkit-backdrop-filter: blur(8px);
+      animation: fadeUpZoomIn 0.9s cubic-bezier(.16,.84,.44,1) both;
+    }
+
+    @keyframes fadeUpZoomIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .google, .github, .back {
+      width: 230px;
+      margin-bottom: 16px;
+      font-size: 1.08rem;
+      font-weight: 500;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform .18s, box-shadow .18s;
+      box-shadow: 0 2px 8px rgba(50,50,50,0.13);
+    }
+
+    .google {
+      background: #4285F4;
+      color: #fff;
+      border: none;
+    }
+    .google:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px #4285f456;
+    }
+
+    .github {
+      background: #222;
+      color: #fff;
+      border: none;
+    }
+    .github:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px #2225;
+    }
+
+    .back {
+      padding: 8px 16px;
+      border: 1px solid #ccc;
+      background-color: rgba(255,255,255,0.97);
+      color: #222;
+    }
+    .back:hover {
+      background: #ededed;
+      transform: scale(1.04);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="login-container">
+    <div class="login-card">
+      <i class="fa fa-book fa-3x" style="color:#4285F4; margin-bottom:24px;"></i>
+      <h2>Please log-in/sign-up with your preferred service</h2>
+
+      <a href="/oauth2/authorization/google">
+        <button class="google">
+          <i class="fa fa-google" style="margin-right: 8px;"></i>  Google
+        </button>
+      </a>
+
+      <a href="/oauth2/authorization/github">
+        <button class="github">
+          <i class="fa fa-github" style="margin-right: 8px;"></i>  GitHub
+        </button>
+      </a>
+
+      <a href="/">
+        <button class="back">
+          <i class="fa fa-arrow-left" style="margin-right: 8px;"></i> Back to Home
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

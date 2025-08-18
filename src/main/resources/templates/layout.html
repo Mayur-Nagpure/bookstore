@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head">
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="description"
+		  content="Browse & discover millions of products. Read customer reviews and find best sellers. We ship to over 100 international destinations, right to your doorstep.">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<title>Online Book Store</title>
+	<link href="../static/images/logo.png" th:href="@{/images/logo.png}"
+		  rel="shortcut icon" />
+
+	<!-- Bootstrap CSS -->
+	<link
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous" />
+	<!-- Font Awesome -->
+	<link
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous" />
+	<!-- Custom style -->
+	<link href="../static/css/style.css" th:href="@{/css/style.css}"
+		  rel="stylesheet" />
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+	<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+	<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<nav th:fragment="header" class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<div class="container-fluid">
+
+		<a class="navbar-brand" href="/">Online Book Store</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar"
+				aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="mynavbar">
+
+			<!-- Left side nav -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/cart">Cart</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/admin-login">Admin</a>
+				</li>
+			</ul>
+
+			<!-- Right side nav -->
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item" th:if="${#authentication != null and #authentication.authenticated}">
+          <span th:if="${#authentication.principal instanceof T(org.springframework.security.oauth2.core.user.DefaultOAuth2User)}"
+				style="display:flex; align-items:center; gap:0.5rem;">
+            <i class="fa fa-user-circle fa-2x"></i>
+            <span>
+              Welcome, <strong th:text="${#authentication.principal.attributes['email'] ?: #authentication.principal.attributes['login'] ?: #authentication.name}"></strong>
+            </span>
+            <a href="/logout" title="Logout" style="margin-left:10px;">
+              <i class="fa fa-sign-out fa-2x" style="color:#007bff;"></i>
+            </a>
+          </span>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+</nav>
+
+<h1>Main content</h1>
+
+<footer th:fragment="footer" class="container" style="padding: 50px;">
+	<strong>&copy; <a href="#">Online Book Store</a></strong>
+	<script id="omnidimension-web-widget" async src="https://backend.omnidim.io/web_widget.js?secret_key=436a2209b6a53939ef29ae8b04718c94" ></script>
+
+</footer>
+
+</body>
+</html>
