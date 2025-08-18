@@ -45,12 +45,9 @@ bookstore/
 ├── target/
 ├── README.md
 ├── .gitignore
- |──  Dockerfile
- |----....
+|──  Dockerfile
+|----....
 
-text
-
----
 
 ## Getting Started
 
@@ -95,8 +92,6 @@ Follow these steps to set up and run the project locally.
 **Build from source:**
 mvn clean package
 
-text
-
 ---
 
 ## Usage
@@ -104,13 +99,9 @@ text
 **Run with environment variables or property file:**
 java -jar target/bookstore.jar --spring.config.additional-location=env.properties
 
-text
-
 **Using Docker:**
 docker build -t mayur-nagpure/bookstore .
 docker run -it mayur-nagpure/bookstore
-
-text
 
 ---
 
@@ -123,12 +114,15 @@ text
 
 ---
 
-## Project Roadmap
+Project Roadmap
 
-- [ ] Implement advanced search and filters
-- [ ] Add Docker Compose for multi-service deployment
-- [ ] Expand AI chatbot features
-- [ ] More...
+ Implement core search and filter functionality
+
+ Add Docker Compose support for local development
+
+ Expand AI chatbot integration and improve responses
+
+ Complete checkout and payment processing features
 
 ---
 
