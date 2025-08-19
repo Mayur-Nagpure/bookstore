@@ -6,6 +6,5 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=build /app/target/bookstore.jar /app/bookstore.jar
-EXPOSE 10000
 ENTRYPOINT ["sh", "-c", "java -jar /app/bookstore.jar --server.port=$PORT --server.address=0.0.0.0"]
 
