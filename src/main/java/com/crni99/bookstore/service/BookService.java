@@ -64,7 +64,11 @@ public class BookService {
 	}
 
 	public void delete(Long id) {
-		bookRepository.deleteById(id);
+		if (bookRepository.existsById(id)) {
+			bookRepository.deleteById(id);
+		}
+		// else: do nothing or log info
 	}
+
 
 }
