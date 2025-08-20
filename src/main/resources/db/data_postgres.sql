@@ -2,7 +2,7 @@
 INSERT INTO books (id, name, price, authors, isbn, publisher, published_on) VALUES
 (1, 'The Picture of Dorian Gray', 34.20, 'Oscar Wilde', '9780141439570', 'Ward, Lock & Co.', '1890-07-20'),
 (2, 'The Hobbit', 80.00, 'J. R. R. Tolkien', '9780547928227', 'George Allen & Unwin', '1937-09-21'),
-(3, 'The Silence of the Lambs', 59.90, 'Thomas Harris', '9780312924584', 'St. Martin\'s Press', '1988-05-19'),
+(3, 'The Silence of the Lambs', 59.90, 'Thomas Harris', '9780312924584', 'St. Martin''s Press', '1988-05-19'),
 (4, 'Wuthering Heights', 29.99, 'Emily Brontë', '9781853260018', 'Thomas Cautley Newby', '1847-12-01'),
 (5, 'The Girl with the Dragon Tattoo', 64.30, 'Stieg Larsson', '9780307454546', 'Norstedts Förlag', '2005-08-27'),
 (6, 'Beloved', 41.20, 'Toni Morrison', '9781400033416', 'Alfred A. Knopf', '1987-09-16'),
@@ -13,7 +13,7 @@ INSERT INTO books (id, name, price, authors, isbn, publisher, published_on) VALU
 (11, 'The Lord of the Rings', 99.99, 'J. R. R. Tolkien', '9780261103207', 'Allen & Unwin', '1954-07-29'),
 (12, 'One Hundred Years of Solitude', 69.50, 'Gabriel García Márquez', '9780060883287', 'Harper & Row', '1967-05-30'),
 (13, 'Twilight', 38.00, 'Stephenie Meyer', '0316160172', 'Little, Brown and Company', '2005-10-05'),
-(14, 'The Great Gatsby', 44.90, 'F. Scott Fitzgerald', '9780743273565', 'Charles Scribner\'s Sons', '1925-04-10'),
+(14, 'The Great Gatsby', 44.90, 'F. Scott Fitzgerald', '9780743273565', 'Charles Scribner''s Sons', '1925-04-10'),
 (15, 'Slaughterhouse-Five', 44.30, 'Kurt Vonnegut', '9780440180296', 'Delacorte', '1969-03-31'),
 (16, 'Les Misérables', 68.40, 'Victor Hugo', '9780451419439', 'A. Lacroix, Verboeckhoven & Cie.', '1862-01-01'),
 (17, '1984', 39.50, 'George Orwell', '9780451524935', 'Secker & Warburg', '1949-06-08'),
@@ -44,7 +44,7 @@ INSERT INTO books (id, name, price, authors, isbn, publisher, published_on) VALU
 (42, 'Jane Eyre', 30.45, 'Charlotte Brontë', '9780141441146', 'Smith, Elder & Co.', '1847-10-16'),
 (43, 'The Kite Runner', 52.75, 'Khaled Hosseini', '9781594631931', 'Riverhead Books', '2003-05-29'),
 (44, 'Moby-Dick', 33.10, 'Herman Melville', '9781503280786', 'Harper & Brothers', '1851-10-18'),
-(45, 'The Handmaid\'s Tale', 47.85, 'Margaret Atwood', '9780385490818', 'McClelland and Stewart', '1985-08-17'),
+(45, 'The Handmaid''s Tale', 47.85, 'Margaret Atwood', '9780385490818', 'McClelland and Stewart', '1985-08-17'),
 (46, 'Don Quixote', 61.50, 'Miguel de Cervantes', '9780060934347', 'Francisco de Robles', '1605-01-16'),
 (47, 'The Chronicles of Narnia', 75.00, 'C. S. Lewis', '9780066238500', 'Geoffrey Bles', '1950-10-16'),
 (48, 'A Game of Thrones', 70.00, 'George R. R. Martin', '9780553103540', 'Bantam Books', '1996-08-06');
